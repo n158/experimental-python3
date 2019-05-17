@@ -9,6 +9,7 @@ Small Python 3 scripts from around the world for your experiments and entertainm
 
 # Useful python sites:
 * https://awesome-python.com/
+* https://www.geeksforgeeks.org/python-programming-language/
 * https://www.geeksforgeeks.org/zip-in-python/
 
 
