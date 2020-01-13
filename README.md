@@ -2,6 +2,20 @@
 Small Python 3 scripts from around the world for your experiments and entertainment.
 
 
+# Online books:
+* http://www.professionaltester.com/files/PT-issue41.pdf
+* https://coollib.com/b/434212
+* http://mexalib.com/ Скачивайте книги бесплатно. 
+* https://www.ngpedia.ru/index.html Энциклопедия содержит 630295 статей из разных областей науки и техники. Текстовой базой для составления энциклопедии стала электронная библиотека «Нефть-Газ».
+* http://gigant-book.ru/
+* https://www.pdfdrive.com
+* http://OceanOfPDF.org
+* https://azpdf.tips/ Professional network for the scientific community to connect with each other to share and discuss research.
+* http://manualzilla.com/ 
+* https://dokumen.tips/
+* https://www.packtpub.com/free-ebooks/
+
+
 # Useful programming sites:
 * https://stackoverflow.com/
 * http://qaru.site/
@@ -33,11 +47,11 @@ Small Python 3 scripts from around the world for your experiments and entertainm
 
 
 # Useful online tools:
+* https://2cyr.com/decode/?lang=ru
 * https://web.archive.org/
 * https://www.rapidtables.com/convert/number/hex-to-ascii.html
 * https://convertlive.com/
 * http://www.endmemo.com/convert/
-* https://2cyr.com/decode/?lang=ru
 * https://www.epochconverter.com/
 
 
