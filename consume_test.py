@@ -8,7 +8,7 @@ def consumeA(iterator, n):
     # Use functions that consume iterators at C speed.
     if n is not None:
         # advance to the empty slice starting at position n
-        next(islice(iterator, n, n),None)
+        next(islice(iterator, n, n), None)
     else:
         # feed the entire iterator into a zero-length deque
         collections.deque(iterator, maxlen=0)
