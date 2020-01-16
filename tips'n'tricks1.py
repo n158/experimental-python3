@@ -1,6 +1,43 @@
 # Haven't tested this file, use on your own risk.
 # Maybe there should be interactive menu for displaying ony of these tips on request.
 
+# Top 5 best oneliners
+import random
+
+# N1. All possible combinations of a two lists
+A = ['a', 'b', 'c', 'd', 'e', 'f']
+B = [1, 2, 3, 4, 5, 6]
+combinations = [(a, b) for a in A for b in B]
+print(f'All combinations of {str(A)} and {str(B)}:\n{str(combinations)}')
+
+# N2. Distance between two dots
+dist = lambda w, v: (sum((wi - vi) ** 2 for wi, vi in zip(w, v))) ** .5
+
+# N3. Vector multiplication by number
+def scale(A, x): return [ai * x for ai in A]
+scale([3, 4, 5], 2)
+
+# N4. Vector addition by coordinates
+A = [1, 2, 3]
+B = [5, 8, 10]
+def add(A, B): return [ai + bi for (ai, bi) in zip(A, B)]
+print(f'Vector A = {str(A)}\nVector B = {str(B)}\nA + B = {str(add(A, B))}')
+
+"""
+N4. Matrix transpose
+https://matrix.reshish.com/transpose.php
+The algorithm of matrix transpose is pretty simple.
+    A new matrix is obtained the following way: each [i, j] element of the new matrix gets the value of the [j, i] element of the original one.
+    Dimension also changes to the opposite. For example if you transpose a 'n' x 'm' size matrix you'll get a new one of 'm' x 'n' dimension.
+"""
+a = [[1, 2, 3], [4, 5, 6]]
+inverted_a = [list(i) for i in zip(*a)]
+print(f'matrix a \t{str(a)}\ntransposed \t{str(inverted_a)}')
+
+# N5. Choose one random element from a list
+print(random.choice(['alpha', 'beta', 'gamma', 'delta', 'zeta']))
+
+
 # https://www.techbeamers.com/top-10-python-coding-tips-for-beginners/
 # Ten Essential Python Coding Tips for Beginners
 # Python Tutorials | By Meenakshi Agarwal
