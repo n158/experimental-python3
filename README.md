@@ -72,7 +72,7 @@ Small Python 3 scripts from around the world for your experiments and entertainm
 * https://thomas-cokelaer.info/
 
 # Other useful links:
-* https://www.agroclasi.com/ Agroclasi.com is your coolest blog which we build and also develop to bring you daily inspirations on Chart, The Problem Solver. The pictures covering all of the part of its samples.
+* ~~https://www.agroclasi.com/~~ [offline] Agroclasi.com is your coolest blog which we build and also develop to bring you daily inspirations on Chart, The Problem Solver. The pictures covering all of the part of its samples.
 * https://www.commandlinefu.com/ commandlinefu.com is the place to record those command-line gems that you return to again and again. That way others can gain from your CLI wisdom and you from theirs too. All commands can be commented on, discussed and voted up or down. 
 
 
