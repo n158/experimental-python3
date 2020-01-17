@@ -38,8 +38,8 @@ Personal collection of useful online resources
 * https://www.geeksforgeeks.org/zip-in-python
 * https://python-scripts.com
 * https://www.programcreek.com/python
-* http://sdiehl.github.io/gevent-tutorial gevent For the Working Python Developer Written by the Gevent Community 
-* https://vovkd.github.io/gevent-tutorial gevent для практикующего питониста Написано пользователями Gevent 
+* https://sdiehl.github.io/gevent-tutorial gevent For the Working Python Developer. Written by the Gevent Community 
+* https://vovkd.github.io/gevent-tutorial gevent для практикующего питониста. Написано пользователями Gevent 
 * http://code.activestate.com/recipes
 ---
 * https://www.toptal.com/python/top-10-mistakes-that-python-programmers-make
