@@ -14,3 +14,10 @@ if __name__ == '__main__':
         setattr(obj, p, params[p])
     
     print(obj.attr1)
+    print(obj.attr2)
+    print(obj.attr3)
+
+    # Output:
+    # 1
+    # 2
+    # 3
