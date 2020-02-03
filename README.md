@@ -54,13 +54,13 @@ Personal collection of useful online resources
 
 
 # Useful online tools:
-* https://2cyr.com/decode/?lang=ru
-* https://web.archive.org
-* https://www.rapidtables.com/convert/number/hex-to-ascii.html
-* https://convertlive.com
-* http://www.endmemo.com/convert
-* https://www.epochconverter.com
-* https://www.codecogs.com/latex/eqneditor.php LaTeX formula online editor
+* [Универсальный декодер - конвертер кириллицы на 2cyr.com](https://2cyr.com/decode/?lang=ru)  
+* [The Wayback Machine - Internet Archive](https://web.archive.org)
+* [Hex to ASCII Text Converter at www.rapidtables.com](https://www.rapidtables.com/convert/number/hex-to-ascii.html)
+* [Unit Converter -  Convert between units using our free converter](https://convertlive.com)
+* [Unit Conversions at www.endmemo.com](http://www.endmemo.com/convert)
+* [Epoch & Unix Timestamp Conversion Tools](https://www.epochconverter.com)
+* [The CodeCogs Equation Editor - LaTeX Equation online editor](https://www.codecogs.com/latex/eqneditor.php)
 
 
 # Useful online entertainment:
