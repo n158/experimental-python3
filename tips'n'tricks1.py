@@ -1,28 +1,52 @@
 # Haven't tested this file, use on your own risk.
 # Maybe there should be interactive menu for displaying ony of these tips on request.
 
+#____________________________________________________________
+# How to format a number with a variable number of leading digits
+
+#1 zfill
+'12344'.zfill(10)
+# '0000012344'
+
+#2 f-string for Python >3.6
+num=123; fill='0'; width=6; print(f'{num:{fill}{width}}')
+# '000123'
+
+#3 format
+'{num:{fill}{width}}'.format(num=123, fill='0', width=6)
+# '000123'
+
+#4 percent (printf-style String Formatting)
+'%0*d' % (5, 123)
+# '00123'
+#____________________________________________________________
+#
+#____________________________________________________________
 # Top 5 best oneliners
 import random
 
+#____________________________________________________________
 # N1. All possible combinations of a two lists
 A = ['a', 'b', 'c', 'd', 'e', 'f']
 B = [1, 2, 3, 4, 5, 6]
 combinations = [(a, b) for a in A for b in B]
 print(f'All combinations of {str(A)} and {str(B)}:\n{str(combinations)}')
-
+#____________________________________________________________
 # N2. Distance between two dots
 dist = lambda w, v: (sum((wi - vi) ** 2 for wi, vi in zip(w, v))) ** .5
-
+#____________________________________________________________
 # N3. Vector multiplication by number
 def scale(A, x): return [ai * x for ai in A]
 scale([3, 4, 5], 2)
-
+#____________________________________________________________
 # N4. Vector addition by coordinates
 A = [1, 2, 3]
 B = [5, 8, 10]
 def add(A, B): return [ai + bi for (ai, bi) in zip(A, B)]
 print(f'Vector A = {str(A)}\nVector B = {str(B)}\nA + B = {str(add(A, B))}')
-
+#____________________________________________________________
+#
+#____________________________________________________________
 """
 N4. Matrix transpose
 https://matrix.reshish.com/transpose.php
@@ -33,11 +57,11 @@ The algorithm of matrix transpose is pretty simple.
 a = [[1, 2, 3], [4, 5, 6]]
 inverted_a = [list(i) for i in zip(*a)]
 print(f'matrix a \t{str(a)}\ntransposed \t{str(inverted_a)}')
-
+#____________________________________________________________
 # N5. Choose one random element from a list
 print(random.choice(['alpha', 'beta', 'gamma', 'delta', 'zeta']))
 
-
+#____________________________________________________________
 # https://www.techbeamers.com/top-10-python-coding-tips-for-beginners/
 # Ten Essential Python Coding Tips for Beginners
 # Python Tutorials | By Meenakshi Agarwal
@@ -46,6 +70,7 @@ print(random.choice(['alpha', 'beta', 'gamma', 'delta', 'zeta']))
 # An iterable is an object that has an __iter__ method which returns an iterator. It can accept sequential indexes starting from zero and raises an IndexError when the indexes are no longer valid.
 # A typical example of the enumerate() function is to loop over a list and keep track of the index. For this, we could use a count variable. But Python gives us a nicer syntax for this using the enumerate() function.
 
+#____________________________________________________________
 # ------
 # First prepare a list of strings
 subjects = ('Python', 'Coding', 'Tips')
@@ -53,11 +78,13 @@ subjects = ('Python', 'Coding', 'Tips')
 for i, subject in enumerate(subjects):
     print(i, subject)
 
+
 # Output:
 #    0 Python
 #    1 Coding
 #    2 Tips
 
+#____________________________________________________________
 # ------
 # 4. The data type SET.
 # The data type “set” is a kind of collection. It has been part of Python since version 2.4.
@@ -65,6 +92,7 @@ for i, subject in enumerate(subjects):
 # This fact explains, why the sets unlike lists or tuples can’t have multiple occurrences of the same element.
 # If you want to create a set, use the built-in set() function with a sequence or another iterable object.
 
+#____________________________________________________________
 # ------
 # *** Create a set with strings and perform search in set
 objects = {"python", "coding", "tips", "for", "beginners"}
@@ -87,6 +115,7 @@ if "Java tips" not in objects:
 #    These are the best Python coding tips.
 #    These are the best Python coding tips not Java tips.
 
+#____________________________________________________________
 # ------
 # *** Lets initialize an empty set
 items = set()
@@ -101,6 +130,7 @@ print(items)
 # ** Output
 #    {'Python', 'coding', 'tips'}
 
+#____________________________________________________________
 # ------
 # 5. Dynamic typing.
 # In Java, C++, and other statically typed languages, you have to specify the data type of the function return value as well as the kind of each function argument. On the other hand, Python is a dynamically typed language. In Python, you don’t explicitly provide the data types. Based on the value you’ve assigned, Python keeps track of the datatype internally. Another good definition of dynamic typing is as follows.
@@ -109,6 +139,7 @@ print(items)
 #
 # The following example demonstrates how a function can examine its arguments. And do different things depending on their types.
 
+#____________________________________________________________
 # ------
 # Test for dynamic typing.
 from types import *
@@ -128,6 +159,7 @@ CheckIt("999")
 # Output:
 # Unable to recognize the input data type.
 
+#____________________________________________________________
 # ------
 # 7. Conditional Expressions.
 # Python allows for conditional expressions. Here is an intuitive way of writing conditional statements in Python. Please follow the below example.
@@ -146,7 +178,7 @@ print("Data collected is ", data)
 # 30 Essential Python Tips and Tricks for Programmers
 # Python Tutorials | By Meenakshi Agarwal
 
-
+#____________________________________________________________
 # Tip #2. Chaining of comparison operators.
 # Aggregation of comparison operators is another trick that can come handy at times.
 
@@ -159,7 +191,7 @@ result = 1 >= n <= 9
 print(result)
 # False
 
-
+#____________________________________________________________
 # Tip #3. Use of Ternary operator for conditional assignment.
 # Ternary operators are a shortcut for an if-else statement and also known as conditional operators.
 # [on_true] if [expression] else [on_false]
@@ -188,7 +220,7 @@ print([m**2 if m > 10 else m**4 for m in range(50)])
 
 # [0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561, 10000, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961, 1024, 1089, 1156, 1225, 1296, 1369, 1444, 1521, 1600, 1681, 1764, 1849, 1936, 2025, 2116, 2209, 2304, 2401]
 
-
+#____________________________________________________________
 # Tip #4. Work with multi-line strings.
 # The basic approach is to use backslashes which derive itself from C language.
 
@@ -217,7 +249,7 @@ print(multiStr)
 
 # select * from multi_row where row_id < 5 order by age
 
-
+#____________________________________________________________
 # Tip #6. Print the file path of imported modules.
 # If you want to know the absolute location of modules imported in your code, then use the below trick.
 
@@ -230,7 +262,7 @@ print(socket)
 # <module 'threading' from '/usr/lib/python2.7/threading.py'>
 # <module 'socket' from '/usr/lib/python2.7/socket.py'>
 
-
+#____________________________________________________________
 # Tip #7. Use the “_” operator in the interactive console.
 # It’s a useful feature which not many of us know.
 # In the Python console, whenever we test an expression or call a function, the result dispatches to a temporary name, _ (an underscore).
@@ -243,7 +275,7 @@ print(socket)
 # 
 # The “_” references to the output of the last executed expression.
 
-
+#____________________________________________________________
 # Tip #8. Dictionary/Set comprehensions.
 # Like we use list comprehensions, we can also use dictionary/set comprehensions. They are simple to use and just as effective. Here is an example.
 
@@ -258,7 +290,7 @@ print(testSet)
 
 # Note - There is only a difference of <:> in the two statements.
 
-
+#____________________________________________________________
 # Tip #9. Debugging scripts.
 # We can set breakpoints in our Python script with the help of the <pdb> module. Please follow the below example.
 
@@ -267,7 +299,7 @@ pdb.set_trace()
 
 # We can specify <pdb.set_trace()> anywhere in the script and set a breakpoint there. It’s extremely convenient.
 
-
+#____________________________________________________________
 # Tip #15. 3 ways to reverse string/list.
 # 1.Reverse the list itself.
 
@@ -278,6 +310,7 @@ print(testList)
 # Output:
 # [5, 3, 1]
 
+#____________________________________________________________
 # 2.Reverse while iterating in a loop.
 for element in reversed([1, 3, 5]): print(element)
 
@@ -286,6 +319,7 @@ for element in reversed([1, 3, 5]): print(element)
 # 3
 # 1
 
+#____________________________________________________________
 # 3.Reverse a string/list in line using slicing.
 print("Test Python"[::-1])
 print([1, 3, 5][::-1])
@@ -294,7 +328,7 @@ print([1, 3, 5][::-1])
 # "nohtyP tseT"
 # [5, 3, 1]
 
-
+#____________________________________________________________
 # Tip #17. Use of enums in Python.
 # We can use the following approach to create enum definitions.
 
@@ -312,6 +346,7 @@ print(Shapes.Quadrangle)
 # 2
 # 3
 
+#____________________________________________________________
 # Tip #19. Unpack function arguments using the splat operator.
 # The splat operator offers an artistic way to unpack arguments lists. Please refer the below example for clarity.
 
@@ -330,7 +365,7 @@ test(*testList)
 # 1 2 3
 # 10 20 30
 
-
+#____________________________________________________________
 Tip #20. Use a dictionary to store a switch.
 We can make a dictionary store expressions.
 
@@ -346,7 +381,7 @@ print(calc['subtract'](9, 3))
 # 12
 # 6
 
-
+#____________________________________________________________
 # Tip #21. Calculate the factorial of any number in one line.
 
 import functools
@@ -356,7 +391,7 @@ print(result)
 # Output:
 # 6
 
-
+#____________________________________________________________
 # Tip #24. Check the memory usage of an object.
 # A 32-bit integer consumes 28-bytes in Python 3.5. To verify the memory usage, we can call the <getsizeof> method.
 
@@ -367,7 +402,7 @@ print(sys.getsizeof(x))
 # Output:
 # 28
 
-
+#____________________________________________________________
 # Tip #25. Use __slots__ to reduce memory overheads.
 # Have you ever observed your Python application consuming a lot of resources especially memory? Here is one trick which uses <__slots__> class variable to reduce memory overhead to some extent.
 
@@ -397,7 +432,7 @@ print(sys.getsizeof(FileSystem1))
 
 # Clearly, you can see from the results that there are savings in memory usage. But you should use __slots__ when the memory overhead of a class is unnecessarily large. Do it only after profiling the application. Otherwise, you’ll make the code difficult to change and with no real benefit.
 
-
+#____________________________________________________________
 # Tip #27. Create a dictionary from two related sequences.
 
 t1 = (1, 2, 3)
