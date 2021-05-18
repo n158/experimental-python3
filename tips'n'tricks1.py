@@ -2,6 +2,21 @@
 # Maybe there should be interactive menu for displaying ony of these tips on request.
 
 #____________________________________________________________
+# How to Save/Load a Dictionary using pickle module
+import pickle
+
+dictionary = {'name':"", 'int':1, 'bool':False}
+
+def save(d):
+    with open(d['name'] + '.pickle', 'wb') as f:
+        pickle.dump(d, f, pickle.HIGHEST_PROTOCOL)
+
+def load(name):
+    with open(name + '.pickle', 'rb') as f:
+        return pickle.load(f)
+#____________________________________________________________
+
+#____________________________________________________________
 # How to format a number with a variable number of leading digits
 
 #1 zfill
@@ -20,7 +35,7 @@ num=123; fill='0'; width=6; print(f'{num:{fill}{width}}')
 '%0*d' % (5, 123)
 # '00123'
 #____________________________________________________________
-#
+
 #____________________________________________________________
 # Top 5 best oneliners
 import random
