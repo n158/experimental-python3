@@ -2,35 +2,46 @@
 # Maybe there should be interactive menu for displaying ony of these tips on request.
 
 #____________________________________________________________
-# How to Save/Load a Dictionary using pickle module
+# How to Save/Load a Dictionary
+#____________________________________________________________
+# pickle module (https://docs.python.org/3/library/pickle.html)
 import pickle
 
-dictionary = {'name':"", 'int':1, 'bool':False}
-
-def save(d):
-    with open(d['name'] + '.pickle', 'wb') as f:
-        pickle.dump(d, f, pickle.HIGHEST_PROTOCOL)
+def save(dictionary):
+    with open(dictionary['name'] + '.pickle', 'wb') as f:
+        pickle.dump(dictionary, f, pickle.HIGHEST_PROTOCOL)
 
 def load(name):
     with open(name + '.pickle', 'rb') as f:
         return pickle.load(f)
 #____________________________________________________________
+# json module ----------------------------------------------
+import json
+
+def save(dictionary):
+    with open(dictionary['name'] + '.json', 'w') as f:
+        f.write(json.dumps(dictionary))
+
+def load(name):
+    with open(name + '.pickle', 'r') as f:
+        return json.loads(f.read())
+#____________________________________________________________
 
 #____________________________________________________________
 # How to format a number with a variable number of leading digits
-
+#____________________________________________________________
 #1 zfill
 '12344'.zfill(10)
 # '0000012344'
-
+#____________________________________________________________
 #2 f-string for Python >3.6
 num=123; fill='0'; width=6; print(f'{num:{fill}{width}}')
 # '000123'
-
+#____________________________________________________________
 #3 format
 '{num:{fill}{width}}'.format(num=123, fill='0', width=6)
 # '000123'
-
+#____________________________________________________________
 #4 percent (printf-style String Formatting)
 '%0*d' % (5, 123)
 # '00123'
